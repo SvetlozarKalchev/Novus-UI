@@ -4,7 +4,7 @@ Free to use responsive UI components. All CSS is written with Stylus and is easy
 
 Novus comes with awesome flat icons, thanks to the generous [FlatIcon](http://flaticon.com) This is the current selection:
 
-![icons](https://github.com/SvetlozarKalchev/UI-Components/blob/master/img/icons.png){: height="220px" width="300px"}
+![icons](https://github.com/SvetlozarKalchev/UI-Components/blob/master/img/icons.png)
 
 
 ## Menus
