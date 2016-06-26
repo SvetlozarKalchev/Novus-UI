@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Fixed-menu-bar</title>
+
+  <link rel="stylesheet" href="./css/_main.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="./css/fixed-menu.css" media="screen" title="no title" charset="utf-8">
+
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="menu-container">
+        <div class="menu-item">Home</div>
+        <div class="menu-item">Item 2</div>
+        <div class="menu-item">Item 3</div>
+        <div class="menu-item">Item 4</div>
+        <div class="menu-item">Item 5</div>
+      </div>
+      <img class="menu-icon" src="./img/menu.gif" alt="">
+    </nav>
+  </div>
+</body>
+
+<!-- Script for opening and closing the menu -->
+<script type="text/javascript">
+  var menu = document.getElementsByClassName('menu-icon')[0],
+    menuContents = document.getElementsByClassName('menu-container')[0],
+    isMenuClosed = true;
+
+  menu.addEventListener('click', function toggle(event) {
+    if(isMenuClosed) {
+      menuContents.style.display = "inline-block";
+      isMenuClosed = false
+
+    } else {
+      menuContents.style.display = "none";
+      isMenuClosed = true;
+    }
+
+  })
+</script>
+
+</html>
