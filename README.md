@@ -1,5 +1,7 @@
 # UI Components
 
+Free to use responsive UI components.
+
 ## Menus
 
 ##### Fixed top menu
