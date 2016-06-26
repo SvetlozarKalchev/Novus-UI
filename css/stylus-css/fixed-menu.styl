@@ -6,54 +6,54 @@ menu_item_width = 120px
 menu_color = #000
 
 nav
-  position fixed
-  width nav_width
-  height nav_height
-  line-height nav_height
-  background-color menu_color
-  .menu-container
-    width auto
+    position fixed
+    width nav_width
     height nav_height
-    float left
-    margin-left 150px
-  .menu-item
-    display inline-block
-    width menu_item_width
-    height nav_height
-    margin-right 10px
-    color white
-    font-weight bold
-    overflow hidden
-    text-align center
-  .menu-item:hover
-    background-color #fff
-    color black
-  .menu-icon
-    width nav_height + 10px
-    height nav_height
-    position absolute
-    right 0
-    display none
+    line-height nav_height
+    background-color menu_color
+    .menu-container
+        width auto
+        height nav_height
+        float left
+        margin-left 150px
+    .menu-item
+        display inline-block
+        width menu_item_width
+        height nav_height
+        margin-right 10px
+        color white
+        font-weight bold
+        overflow hidden
+        text-align center
+    .menu-item:hover
+        background-color #fff
+        color black
+    .menu-icon
+        width nav_height + 10px
+        height nav_height
+        position absolute
+        right 0
+        display none
 
 // Responsive styles
 @media(max-width: 900px)
-  nav
-    .menu-container
-      margin-left 0
-      width 100vw
-      height auto
-      background-color menu_color
-      display none
-      .menu-item
-        display block
-        margin 0 auto
-        min-width 200px
-    .menu-icon
-      display inline-block
+    nav
+        .menu-container
+            margin-left 0
+            width 100vw
+            height auto
+            background-color menu_color
+            display none
+        .menu-item
+            display block
+            margin 0 auto
+            min-width 200px
+        .menu-icon
+            display inline-block
 
 // This is needed, so that the menu can switch between mobile and desktop
 // version when resizing the viewport
 @media(min-width: 900px)
-  nav
-    .menu-container
-      display inline-block
+    nav
+        .menu-container
+            display inline-block

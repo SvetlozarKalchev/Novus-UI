@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Fixed-menu-bar</title>
+
+  <link rel="stylesheet" href="./css/_main.css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="./css/side-menu.css" media="screen" title="no title" charset="utf-8">
+
+</head>
+<body>
+  <div class="container">
+    <nav class="closed-menu">
+
+      <div class="logo-container menu-item">
+        <img class="logo-icon" src="./img/company.png" alt="">
+        <p class="company-name">A Company</p>
+      </div>
+
+      <div class="menu-container">
+
+        <div class="menu-item">
+          <img class="icon" src="./img/target.png" alt="">
+          <p class="menu-item-text">Home</p>
+        </div>
+
+        <div class="menu-item">
+          <img class="icon" src="./img/smartphone.png" alt="">
+          <p class="menu-item-text">Dashboard</p>
+        </div>
+
+        <div class="menu-item">
+          <img class="icon" src="./img/calculator.png" alt="">
+          <p class="menu-item-text">API</p>
+        </div>
+
+        <div class="menu-item">
+          <img class="icon" src="./img/safebox.png" alt="">
+          <p class="menu-item-text">Settings</p>
+        </div>
+
+        <div class="menu-item">
+          <img class="icon" src="./img/padlock.png" alt="">
+          <p class="menu-item-text">Account</p>
+        </div>
+
+      </div>
+
+      <div class="menu-icon-container">
+        <img class="menu-icon" src="./img/exchange.png" alt="">
+      </div>
+
+    </nav>
+  </div>
+</body>
+
+<!-- Script for opening and closing the menu -->
+<script type="text/javascript">
+  var menuToggle = document.getElementsByClassName('menu-icon-container')[0],
+    navbar = document.getElementsByTagName('nav')[0],
+    companyName = document.getElementsByClassName('company-name')[0],
+    menuItems = document.getElementsByClassName('menu-item-text'),
+
+    isMenuClosed = true;
+
+  // Remove the display: none property from the text in the menu only
+  // after opening it to avoid jitter.
+  function toggleText(showText) {
+    if(showText) {
+      companyName.style.display = "block";
+
+      for(var i = 0; i < menuItems.length; i++) {
+        menuItems[i].style.display = "inline-block";
+      }
+
+    }
+    else {
+      companyName.style.display = "none";
+
+      for(var i = 0; i < menuItems.length; i++) {
+        menuItems[i].style.display = "none";
+      }
+    }
+  }
+
+  menuToggle.addEventListener('click', function toggle(event) {
+    if(isMenuClosed) {
+      isMenuClosed = false
+      navbar.className = "open";
+      // Show the text after the opening animation
+      setTimeout(toggleText.bind(this, true), 150);
+
+    } else {
+      isMenuClosed = true;
+      // Hide the text before the closing animation
+      setTimeout(toggleText.bind(this, false));
+      navbar.className = "close";
+    }
+
+  })
+</script>
+
+</html>
