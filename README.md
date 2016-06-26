@@ -1,6 +1,10 @@
-# UI Components
+# Novus Components
 
 Free to use responsive UI components. All CSS is written with Stylus and is easy to customize.
+
+Novus comes with awesome flat icons, thanks to the generous ![FlatIcon](http://flaticon.com) This is the current selection:
+
+![icons](https://github.com/SvetlozarKalchev/UI-Components/blob/master/img/icons.png)
 
 ## Menus
 
